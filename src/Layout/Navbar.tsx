@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
     return (
         <div className="h-16">
-            <nav className="w-full h-full max-w-[1220px] mx-auto px-20 bg-slate-400  flex justify-between items-center">
+            <nav className="w-full h-full max-w-[1220px] mx-auto px-[20px] bg-slate-400  flex justify-between items-center">
                 <span className="text-3xl">iRepaire</span>
                 <ul className="space-x-6">
                     <NavLink to="">Home</NavLink>
