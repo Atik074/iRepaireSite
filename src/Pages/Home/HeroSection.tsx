@@ -20,10 +20,14 @@ const introChildren = {
 };
 
 const laptop ={
-   initial :{y:0} ,
-   animate: {y:30 ,
+   initial :{y:0 , rotate:0 , scale:4} ,
+   animate: {
+    y:30 ,
+    rotate:-30 ,
+    scale:1 ,
     transition:{
-      y:{duration: 1,
+        duration:1 ,
+      y:{duration: 2,
     repeat: Infinity,
     repeatType: "reverse",
       ease: "easeInOut"}
@@ -34,7 +38,8 @@ const laptop ={
 
 const HeroSection = () => {
   return (
-    <Container className=" h-[calc(100vh - 64px)] mt-52   place-content-center grid grid-cols-1 lg:grid-cols-2">
+    <div className="overflow-hidden"> 
+    <Container className=" h-screen mt-52 pt-16   place-content-center grid grid-cols-1 lg:grid-cols-2">
       <motion.div variants={intro} initial="hidden" animate="visible">
         <motion.h1
           variants={introChildren}
@@ -68,12 +73,13 @@ const HeroSection = () => {
             animate="animate"
        className=" mt-10 w-3/4 lg:w-full mx-auto">
         <img
-          className="-rotate-[30deg] h-[80%] ml-8 object-contain"
+          className=" h-[80%] ml-8 object-contain"
           src={mackbook}
           alt=""
         />
       </motion.div>
     </Container>
+    </div>
   );
 };
 
