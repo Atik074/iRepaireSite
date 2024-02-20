@@ -1,4 +1,12 @@
 import Container from "@/components/Container";
+import BatteryReplacemnet from "@/components/serviceTiles/BatterReplacemnet";
+import ChipReplacement from "@/components/serviceTiles/ChipReplacement";
+import DataRecovery from "@/components/serviceTiles/DataRecovery";
+import Delivery from "@/components/serviceTiles/Delivery";
+import FreeDiagno from "@/components/serviceTiles/FreeDiagno";
+import StorageReplacement from "@/components/serviceTiles/StorageReplacement";
+import Support from "@/components/serviceTiles/Support";
+
 
 const ServiceSection = () => {
   return (
@@ -12,13 +20,18 @@ const ServiceSection = () => {
         </p>
       </div>
       <div className="grid grid-cols-12 gap-5">
-        <div className="grid col-span-12  rounded-xl bg-red-700 h-[415px]"></div>
-        <div className="grid lg:col-span-5 col-span-6  rounded-xl bg-red-700 h-[415px]"></div>
-        <div className="grid lg:col-span-7 col-span-6 rounded-xl bg-red-700 h-[415px]"></div>
-        <div className="grid col-span-12  rounded-xl bg-red-700 h-[415px]"></div>
-        <div className="grid lg:col-span-4 md:col-span-6 col-span-12  rounded-xl bg-red-700 h-[415px]"></div>
-        <div className="grid lg:col-span-4 md:col-span-6 col-span-12 bg-red-700 h-[415px]"></div>
-        <div className="grid lg:col-span-4 md:col-span-12 col-span-12 bg-red-700 h-[415px]"></div>
+        <BatteryReplacemnet />
+        <ChipReplacement/>
+        <DataRecovery/>
+        <StorageReplacement/>
+        <Delivery/>
+        <FreeDiagno/>
+        <Support/>
+
+     
+       
+      
+    
       </div>
     </Container>
   );
