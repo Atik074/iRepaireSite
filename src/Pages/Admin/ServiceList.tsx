@@ -3,12 +3,12 @@ import { useQuery } from "react-query";
 
 const ServiceList = () => {
 
-const  {data , isLoading, isError} = useQuery({
+const {data , isLoading} = useQuery({
     queryKey:["service"] ,
-    queryFn: ()=>{
-        getservices;
-    }
+    queryFn: getservices
 })
+
+console.log(data)
 
 if(isLoading){
     return <h3>Loading...</h3>
@@ -17,9 +17,9 @@ if(isLoading){
 
     return (
         <div>
-              {
-                data.data.map((item) =>console.log(item.name))
-              }
+            {
+                data.data.map((item)=>(console.log(item)))
+            }
         </div>
     );
 };
